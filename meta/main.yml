@@ -105,16 +105,16 @@ galaxy_info:
   #- cloud:ec2
   #- cloud:gce
   #- cloud:rax
-  - clustering
+  #- clustering
   #- database
   #- database:nosql
   #- database:sql
-  #- development
-  - monitoring
+  - development
+  #- monitoring
   - networking
   #- packaging
-  #- system
-  #- web
+  - system
+  - web
 dependencies: []
   # List your role dependencies here, one per line. Only
   # dependencies available via galaxy should be listed here.
