@@ -1,0 +1,15 @@
+---
+# tasks for gotty
+- get_url: url=https://github.com/yudai/gotty/releases/download/{{ version }}/linux_amd64.tar.gz
+  tags: [ gotty ]
+  args:
+    dest: /tmp/gotty-{{ version }}-linux_amd64.tar.gz
+    mode: 0644
+    sha256sum: "{{ sha256sum }}"
+
+- command: tar xfz /tmp/gotty-{{ version }}-linux_amd64.tar.gz chdir=/usr/local/bin
+  tags: [ gotty, gotty.tar ]
+
+- file: path=/usr/local/bin/gotty mode=0755 state=file
+  tags: [ gotty, gotty.chmod ]
+
